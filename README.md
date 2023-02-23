@@ -1,73 +1,43 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# Music-Platform
+- Music-Platform is a web application that allows users to upload, store, and listen to music tracks. The application provides various features such as track creation, deletion, updating, and searching, as well as the ability to play tracks and count the number of times they have been played.
+- One of the key features of the application is the ability to create music tracks. Users can create a track by uploading an audio file and providing information such as the track name, artist, and genre. The application also allows users to view a list of all music tracks and search for tracks by name or artist.
+- The application also provides the ability to play music tracks and count the number of times they have been played. When a user plays a track, the number of times the track has been played is incremented in the database.
+- Users can also leave comments on tracks. When a user leaves a comment, the comment is stored in the database and associated with the track.
+- Users can access static images and audio files by providing the filename in the URL.
 
 ## Installation
+You can fork the app or you can git-clone the app into your local machine. Once done that, please install all the
+dependencies by running
 
-```bash
-$ npm install
 ```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+$ npm i
+set your data to connect MongoDB
+$ npm start
 ```
+Check [Music-Platform Documentation](https://documenter.getpostman.com/view/25263444/2s93CNMss5) for more info.
 
-## Test
+# Key Features
+- Users can create a new music track by sending a POST request to /tracks.
+- Users can get a list of all music tracks by sending a GET request to /tracks.
+- Users can get a single music track by ID by sending a GET request to /tracks/:id.
+- Users can delete a music track by ID by sending a DELETE request to /tracks/:id.
+- Users can update a music track by ID by sending a PATCH request to /tracks/:id.
+- Users can create a new comment for a music track by sending a POST request to /comments.
+- Users can increment the number of times a track has been played by sending a POST request to /tracks/listen/:id.
+- Users can search for music tracks by name or artist by sending a GET request to /tracks/search?q=:query.
+- Users can get a static image file by filename by sending a GET request to /static/images/:filename.
+- Users can get a static audio file by filename by sending a GET request to /static/audio/:filename.
 
-```bash
-# unit tests
-$ npm run test
+# The project is built using the following packages:
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<ul>
+<li><b>Nodejs </b></li>
+<li><b>NestJS </b></li>
+<li><b>Express.js </b></li>
+<li><b>Typescript </b></li>
+<li><b>Eslint/Prettier </b></li>
+<li><b>File System </b></li>
+<li><b>MongoDB </b></li>
+<li><b>Mongoose </b></li>
+<li><b>Postman </b></li>
+</ul>
